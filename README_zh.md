@@ -77,35 +77,3 @@ java -cp bin gui.StartFrame
 |------|------|
 | statistics.txt | 两文件关键字 / 标识符频率（按当前排序） |
 | similarity.txt | 两个相似度值 + 结论 |
-
-## 改进方向建议
-- 使用标准 `HashMap` 替换自定义结构减少重复代码
-- 过滤注释与字符串字面量（词法分析或 JavaParser）
-- 引入余弦相似度 / TF-IDF / 词频归一化
-- 指纹算法：Rabin-Karp / Winnowing
-- 基于 AST 的结构相似（树哈希、编辑距离）
-- 变量重命名规避检测（α-重命名统一化）
-- 导出 JSON / CSV / HTML 报告
-- 批量比对（生成相似度矩阵）
-- 高亮可疑片段范围
-
-## 免责声明
-本工具输出仅为启发式参考，不作为学术诚信或法律判定的唯一依据。请结合人工审查与更专业的分析。
-
-## 贡献
-欢迎提交 Issue / PR，或 Fork 后扩展更高级的检测算法与可视化功能。
-
-## License
-如需开源，请在根目录添加 LICENSE（推荐 MIT）。
-
-## Git 推送示例
-```
-git init
-git add .
-git commit -m "Init"
-git branch -M main
-git remote add origin https://github.com/<用户名>/CodeSimilarityComparator.git
-git push -u origin main
-```
-
-英文版请见：README.md
